@@ -5,7 +5,7 @@ class AutomatoFD:
         self.estados_finais = estados_finais
         self.transicoes = transicoes
 
-    def verificar_palavra(self, palavra):
+    def verificar_palavraa(self, palavra):
         estado_atual = self.estado_inicial
 
         for simbolo in palavra:
@@ -16,7 +16,7 @@ class AutomatoFD:
 
         return estado_atual in self.estados_finais
 
-estados = input("Digite os estados separados por vírgula: (Ex: q0,q1,q2)").split(',')
+estados = input("Digite os estados separados por vírgula (Ex: q0,q1,q2): ").split(',')
 
 estado_inicial = input("Digite o estado inicial: ")
 
@@ -40,7 +40,7 @@ while True:
     if palavra == 'sair':
         break
 
-    if automato.verificar_palavra(palavra):
+    if automato.verificar_palavraa(palavra):
         print("A palavra é aceita pelo autômato.")
     else:
         print("A palavra é rejeitada pelo autômato.")
