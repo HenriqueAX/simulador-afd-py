@@ -1,11 +1,11 @@
-class AutomatoFinitoDeterministico:
+class AutomatoFD:
     def __init__(self, estados, estado_inicial, estados_finais, transicoes):
         self.estados = estados
         self.estado_inicial = estado_inicial
         self.estados_finais = estados_finais
         self.transicoes = transicoes
 
-    def processar_palavra(self, palavra):
+    def verificar_palavra(self, palavra):
         estado_atual = self.estado_inicial
 
         for simbolo in palavra:
@@ -32,7 +32,7 @@ while True:
     estado_atual, simbolo, estado_destino = transicao.split(',')
     transicoes[(estado_atual.strip(), simbolo.strip())] = estado_destino.strip()
 
-automato = AutomatoFinitoDeterministico(estados, estado_inicial, estados_finais, transicoes)
+automato = AutomatoFD(estados, estado_inicial, estados_finais, transicoes)
 
 while True:
     palavra = input("Digite uma palavra para verificar se a mesma é aceita pelo autômato (ou 'sair' para encerrar): ")
@@ -40,7 +40,7 @@ while True:
     if palavra == 'sair':
         break
 
-    if automato.processar_palavra(palavra):
+    if automato.verificar_palavra(palavra):
         print("A palavra é aceita pelo autômato.")
     else:
         print("A palavra é rejeitada pelo autômato.")
