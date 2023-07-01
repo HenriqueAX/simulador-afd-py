@@ -21,4 +21,4 @@ Em seguida é necessário informar qual o estado inicial e os estados finais, ta
 
 Após isso, é necessário informar todas as transições do autômato, informando o estado de partida, a letra e o destino sempre separando por vírgula (Ex: q0,a,q1)
 
-Por fim, o programa solicita que sejam informadas palavras são aceitas ou rejeitadas pelo autômato construído anteriormente
+Por fim, o programa solicita que sejam informadas palavras para testar se serão aceitas ou rejeitadas pelo autômato construído anteriormente
